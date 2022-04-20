@@ -1,0 +1,28 @@
+.рeculiarities {
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        }
+        &__item {
+            width: 270px;
+            }
+            &__img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 120px;
+                background: $grey-color;
+                text-align: center;
+                border-radius: 4px;
+                }
+                &__title {
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    line-height: 1.15;
+                    text-transform: uppercase; 
+                }
+                &__text {
+                    line-height: 1.7;
+                    color: $tripartite-color;
+                }
+}

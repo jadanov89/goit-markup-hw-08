@@ -1,0 +1,39 @@
+
+.container__effective { 
+    text-align: center;
+}
+
+.effective {
+       max-width: 1600px;
+       height: 600px;
+       margin: 0 auto;
+       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+       url(../image/background_img.jpg);
+        background-size: cover;
+       background-color: $black-color;
+       background-repeat: no-repeat;
+        &__title {
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.4;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: $fourth-color;
+            padding-top: 200px; 
+        }
+
+            &__btn {
+                @include btn-style;
+                font-family: "Roboto",sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.9;
+                border-color: rgba(0,0,0,0);
+                margin-top: 30px;
+            }
+            &__btn:hover,
+            &__btn:focus {
+                background-color: $btn-hover;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+}

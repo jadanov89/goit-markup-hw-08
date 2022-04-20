@@ -1,0 +1,32 @@
+.portfolio-btn {
+    &__group {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        
+    }
+    &__item:nth-child(2n) {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+        &__button {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+            padding: 6px 22px;
+            background: $grey-color;
+            color: $secondary-color;
+            border-radius: 4px;
+            border-color: transparent;
+            cursor: pointer;
+        }
+
+        &__button:hover,
+        &__button:focus {
+            color: $fourth-color;
+            background-color: $brand-color;
+            transition: background-color, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+}

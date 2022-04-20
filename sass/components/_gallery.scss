@@ -1,0 +1,74 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: calc(-1 * $card-set-gap);
+    margin-top: calc(-1 * $card-set-gap);
+    &>&__item {
+        position: relative;
+        overflow: hidden;
+        flex-basis: calc(100% / 3 - $card-set-gap);
+        margin-left: $card-set-gap;
+        margin-top: $card-set-gap;
+    }
+
+    &__item:hover &__desc, 
+    &__item:focus &__desc {
+        transform: translateY(-100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__item:hover,
+    &__item:focus{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+        &__link {
+            display: block;
+        }
+            &__image {
+                min-width: 100%;
+            }
+            &__desc {
+                position: absolute;
+                min-width: 100%;
+                height: 302px;
+                overflow: hidden;
+                background-color: rgba(33, 150, 243, 0.9);
+                transform: translateY(0%);
+                transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+                &__paragraph {
+                    font-size: 18px;
+                    line-height: 1.5;
+                    padding: 63px 24px;
+                    color: $fourth-color;
+                }
+
+        &__wrap {
+            position: relative;
+            z-index: 1;
+            background: $fourth-color;
+            padding: 20px 24px;
+            border-bottom: 1px solid $border-color;
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+        }
+
+            &__text {
+                font-size: 16px;
+                line-height: 1.9;
+                color: $tripartite-color;
+            }
+
+            &__title {
+                font-size: 18px;
+                line-height: 2;
+                letter-spacing: 0.06em;
+                margin-bottom: 4px;
+                color: $secondary-color; 
+            }
+}
