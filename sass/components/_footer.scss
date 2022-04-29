@@ -79,8 +79,10 @@
 
             &__button {
                 @include btn-style;
+                
                 display: inline-flex;
                 justify-content: center;
+                width: 200px;
                 font-size: 16px;
                 line-height: 1.8;        
                 border: 0px;
@@ -98,5 +100,51 @@
                     margin-left: 10px;
                 }
 
+
+}
+
+@media screen and (max-width: 1200px) {
+
+.footer__container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footer-location {
+    flex-grow: inherit;
+    text-align: center;
+}
+.footer-networks {
+    text-align: center;
+}
+.footer-form {
+    text-align: center;
+    margin: 60px auto auto;
+}
+.footer-form__wrap {
+    flex-direction: column;
+}
+  
+.footer-form__input {
+    margin-bottom: 20px;
+}
+
+.footer-form__button {
+    margin: 0 auto;
+}
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+    } 
+    .footer-location {
+        margin: 0 auto;
+    }
+    .footer-networks {
+        
+        margin: 60px auto auto;
+    }
 
 }

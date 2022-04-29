@@ -72,3 +72,51 @@
                 color: $secondary-color; 
             }
 }
+
+
+@media screen and (max-width: 1200px) { 
+    .gallery > .gallery__item {
+        flex-basis: calc(50% - 15px);
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+   
+    .gallery__paragraph {
+        padding: 49px 24px 0px 24px;
+    }
+}
+
+
+@media screen and (max-width: 768px) { 
+    .gallery > .gallery__item {
+        flex-basis: calc(50% - 30px);
+        margin-left: 30px; 
+    }
+}
+
+
+@media screen and (max-width: 480px) { 
+   
+    .gallery > .gallery__item {
+        flex-basis: calc(100% - 15px);
+        margin-top: 30px;
+        
+       
+    }  
+    .gallery {
+        justify-content: center;
+    }
+    
+    .gallery__image {
+        min-width: 100%;
+      }
+    .gallery__desc {
+        height: 80%;
+    }
+    .gallery__paragraph {
+        padding: 77px 24px 0px 24px;
+    }
+      
+    
+}
+

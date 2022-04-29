@@ -5,41 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
-     <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/portfolio.min.css">
 </head>
 <body>
-    <header class="header">
+    <header>
         <div class="container container__nav">
             <nav class="nav">
-            <a href="./index.html" rel="noreferrer noopener" class="logo__link"><span class="logo__span">Web</span>Studio</a>
-            <ul class="menu">
-                <li class="menu__item"><a href="./index.html" target="_blank" rel="noreferrer noopener" class="menu__link">Студия</a></li>
-                <li class="menu__item menu__item--portfolio"><a href="./portfolio.html" target="_blank" rel="noreferrer noopener" class="menu__link menu__link--active">Портфолио</a></li>
-                <li class="menu__item"><a href="#" target="_blank" rel="noreferrer noopener" class="menu__link">Контакты</a></li>
-            </ul>
+            <a href="#" rel="noreferrer noopener" class=logo__link>
+                <span class="logo__span">Web</span>Studio
+            </a>
             </nav>
+            <div class="imform-block">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" target="_blank" rel="noreferrer noopener" class="menu__link">
+                        Студия
+                    </a>
+                </li>
+                <li class="menu__item menu__item--portfolio">
+                    <a href="./portfolio.html" target="_blank" rel="noreferrer noopener" class="menu__link menu__link--active">
+                        Портфолио
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" target="_blank" rel="noreferrer noopener" class="menu__link">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
             <ul class="content">
-                <li class="content__item content-mail">
+                <li class="content__item">
                 
                         <svg class="content__icons" width="16" height="12">
                             <use href="./image/symbol-defs.svg#icon_mail"></use>
                         </svg>
-                    
-                  
                     <a href="mailto:info@devstudio.com" class="content__link">info@devstudio.com</a>
                 </li>
-                <li class="content__item content-phon">
+                <li class="content__item">
 
                         <svg class="content__icons" width="10" height="16">
                             <use href="./image/symbol-defs.svg#icon_phone"></use>
                         </svg>      
-                                   
-
                     <a href="tel:0961111111" class="content__link">+38 096 111 11 11</a>
                 </li>
             </ul>
+        </div>
+            <button type="button" class="button-menu is-open" 
+            aria-label="Переключатель мобильного меню" 
+            aria-expanded="false"
+            aria-controls="menu-conteiner" 
+            data-menu-button>
+                <svg class="" width="40" height="40">
+                    <use class="icon-menu" href="./image/symbol-defs.svg#icon_button-menu"></use>
+                    <use class="icon-cross" href="./image/symbol-defs.svg#icon_button-close"></use>
+                </svg>
+            </button>
+            <div class="menu-conteiner" id="menu-conteiner" data-menu>
+                <ul class="menu-conteiner__block">
+                    <li class="menu-conteiner__item">
+                        <a href="#" class="menu-conteiner__item-link">Студия</a>
+                    </li>
+                    <li class="menu-conteiner__item">
+                        <a href="#" class="menu-conteiner__item-link act">Портфолио</a>
+                    </li>
+                    <li class="menu-conteiner__item">
+                        <a href="#" class="menu-conteiner__item-link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="menu-conteiner__contacts" >
+                    <li class="menu-conteiner__phone">
+                        <a href="tel:0961111111" class="menu-conteiner__phone-link">+38 096 111 11 11</a>
+                    </li>
+                    <li class="menu-conteiner__mail">
+                        <a href="mailto:info@devstudio.com" class="menu-conteiner__mail-link">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="menu-conteiner__network">
+                    <li class="menu-conteiner__social">
+                        <a href="#" class="menu-conteiner__network-link">Instagram</a>
+                    </li>
+                    <li class="menu-conteiner__social">
+                        <a href="#" class="menu-conteiner__network-link">Twitter</a>
+                    </li>
+                    <li class="menu-conteiner__social">
+                        <a href="#" class="menu-conteiner__network-link">Facebook</a>
+                    </li>
+                    <li class="menu-conteiner__social">
+                        <a href="#" class="menu-conteiner__network-link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -68,7 +125,8 @@
             <ul class="gallery">
                 <li class="gallery__item">
                     <a class="gallery__link" href="#">
-                        <img src="./image/website_1.jpg" alt="Технокряк" class="gallery__image" width="370" />
+                        <img srcset="./image/website_1-480.jpg 480w, ./image/website_1-768.jpg 768w, ./image/website_1-1200.jpg 1200w" alt="Технокряк" class="gallery__image" width="370">
+
                         <div class="gallery__desc">
                             <p class="gallery__paragraph">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения? о компании или частном лице.</p>
                         </div>
@@ -80,7 +138,8 @@
                 </li>
                 <li class="gallery__item">
                     <a class="gallery__link" href="#">
-                    <img src="./image/basketball_2.jpg" alt="New Orlean vs Golden Star" class="gallery__image" width="370" />
+                    <img srcset="./image/basketball_2-480.jpg 480w, ./image/basketball_2-768.jpg 768w, ./image/basketball_2-1200.jpg 1200w" alt="New Orlean vs Golden Star" class="gallery__image" width="370">
+
                         <div class="gallery__desc">
                             <p class="gallery__paragraph">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения? о компании или частном лице.</p>
                         </div>
@@ -92,7 +151,8 @@
                 </li>
                 <li class="gallery__item">
                     <a class="gallery__link" href="#">
-                        <img src="./image/seafood_3.jpg" alt="Ресторан Seafood" class="gallery__image" width="370" />
+                        <img srcset="./image/seafood_3-480.jpg 480w, ./image/seafood_3-768.jpg 768w, ./image/seafood_3-1200.jpg 1200w" alt="Ресторан Seafood" class="gallery__image" width="370">
+
                         <div class="gallery__desc">
                             <p class="gallery__paragraph">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения? о компании или частном лице.</p>
                         </div>
@@ -104,7 +164,8 @@
                 </li>
                 <li class="gallery__item">
                     <a class="gallery__link" href="#">
-                        <img src="./image/headphones_4.jpg" alt="Проект Prime" class="gallery__image" width="370" />
+                        <img srcset="./image/headphones_4-480.jpg 480w, ./image/headphones_4-768.jpg 768w, ./image/headphones_4-1200.jpg 1200w" alt="Проект Prime" class="gallery__image" width="370">
+
                             <div class="gallery__desc">
                                 <p class="gallery__paragraph">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения? о компании или частном лице.</p>
                             </div>
@@ -114,9 +175,11 @@
                             </div>
                     </a>
                 </li>
+
                 <li class="gallery__item">
                     <a class="gallery__link" href="#">
-                        <img src="./image/box_5.jpg" alt="Проект Boxes" class="gallery__image" width="370" />
+                        <img srcset="./image/box_5-480.jpg 480w, ./image/box_5-768.jpg 768w, ./image/1200.jpg 1200w" alt="Проект Boxes" class="gallery__image" width="370">
+
                             <div class="gallery__desc">
                                 <p class="gallery__paragraph">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения? о компании или частном лице.</p>
                             </div>
@@ -124,11 +187,13 @@
                                 <h2 class="gallery__title">Проект Boxes</h2>
                                 <p class="gallery__text">Приложение</p>
                             </div>
-                </a>
+                    </a>     
                 </li>
+
                 <li class="gallery__item">
                     <a class="gallery__link" href="#">
-                        <img src="./image/interface_6.jpg" alt="Вдохновение не имеет границ" class="gallery__image" width="370" />
+                        <img srcset="./image/interface_6-480.jpg 480w, ./image/interface_6-768.jpg 768w, ./image/interface_6-1200.jpg 1200w" alt="Вдохновение не имеет границ" class="gallery__image" width="370">
+
                             <div class="gallery__desc">
                                 <p class="gallery__paragraph">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения? о компании или частном лице.</p>
                             </div>
@@ -140,7 +205,8 @@
                 </li>
                 <li class="gallery__item">
                     <a class="gallery__link" href="#">
-                        <img src="./image/magazine_7.jpg" alt="Издание Limited Edition"  class="gallery__image" width="370" />
+                        <img srcset="./image/magazine_7-480.jpg 480w, ./image/magazine_7-768.jpg 768w, ./image/magazine_7-1200.jpg 1200w" alt="Издание Limited Edition" class="gallery__image" width="370">
+
                             <div class="gallery__desc">
                                 <p class="gallery__paragraph">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения? о компании или частном лице.</p>
                             </div>
@@ -152,7 +218,8 @@
                 </li>
                 <li class="gallery__item">
                     <a class="gallery__link" href="#">
-                        <img src="./image/tag_8.jpg" alt="Проект LAB" class="gallery__image" width="370" />
+                        <img srcset="./image/tag_8-480.jpg 480w, ./image/tag_8-768.jpg 768w, ./image/tag_8-1200.jpg 1200w" alt="Проект LAB" class="gallery__image" width="370">
+
                             <div class="gallery__desc">
                                 <p class="gallery__paragraph">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения? о компании или частном лице.</p>
                             </div>
@@ -164,7 +231,8 @@
                 </li>
                 <li class="gallery__item">
                     <a class="gallery__link" href="#">
-                        <img src="./image/business_work_9.jpg" alt="Growing Business" class="gallery__image" width="370" />
+                        <img srcset="./image/business_work_9-480.jpg 480w, ./image/business_work_9-768.jpg 768w, ./image/business_work_9-1200.jpg 1200w" alt="Growing Business" class="gallery__image" width="370">
+
                             <div class="gallery__desc">
                                 <p class="gallery__paragraph">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения? о компании или частном лице.</p>
                             </div>
@@ -244,6 +312,6 @@
 
         </div>
     </footer>
-
+    <script src="./js/button-menu.js"></script>
 </body>
 </html>

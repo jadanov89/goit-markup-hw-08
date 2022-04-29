@@ -26,3 +26,46 @@
                     color: $tripartite-color;
                 }
 }
+
+
+@media screen and (max-width: 1200px) {
+    .рeculiarities__block {
+        display: flex;
+        flex-wrap: wrap;
+      
+    }
+    
+
+    .рeculiarities__item {
+        width: 50%;
+        flex-basis: calc(50% - 15px);
+        margin-top: 30px;
+        margin-left: 0;
+    }
+}
+
+/*
+@media (min-width: 481px) and (max-width: 1200px) {
+    .рeculiarities__item {
+        width: 50%;
+        flex-basis: calc(50% - 15px);
+        margin-top: 30px;
+        margin-left: -15px;
+}
+}
+*/
+@media screen and (max-width: 480px) {
+    .рeculiarities__item {
+        width: 100%;
+        flex-basis: auto;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    .рeculiarities__title {
+        text-align: center;
+    }
+    .рeculiarities__text {
+        text-align: center;
+    }
+}
+

@@ -38,12 +38,16 @@ label, input {
     border-bottom: 1px solid $header-color;
 }
 
+
+
 .container {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
 }
+
+
 
 .menu__link,
 .content__link {
@@ -96,6 +100,32 @@ label, input {
 .address {
     margin-top: 20px;
 }
+
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+      width: 768px;
+    }
+    .section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+    }
+}
+
+
 
 
 
