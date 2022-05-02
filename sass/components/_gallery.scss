@@ -80,6 +80,7 @@
         margin-top: 30px;
         margin-left: 15px;
     }
+
    
     .gallery__paragraph {
         padding: 49px 24px 0px 24px;
@@ -89,9 +90,23 @@
 
 @media screen and (max-width: 768px) { 
     .gallery > .gallery__item {
-        flex-basis: calc(50% - 30px);
+        flex-basis: calc(354px - 30px);
         margin-left: 30px; 
     }
+    .gallery {
+        justify-content: center;
+    }
+
+    .gallery__item {
+        flex-basis: none;
+        
+    }
+    .general-title {
+        font-size: 28px;
+        line-height: 1.8;
+    }
+
+
 }
 
 
@@ -102,11 +117,7 @@
         margin-top: 30px;
         
        
-    }  
-    .gallery {
-        justify-content: center;
-    }
-    
+    }     
     .gallery__image {
         min-width: 100%;
       }
@@ -117,6 +128,9 @@
         padding: 77px 24px 0px 24px;
     }
       
-    
+
 }
+
+
+
 

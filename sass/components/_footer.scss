@@ -33,7 +33,7 @@
 
 
 .footer-networks {
-    margin-left: 70px;
+    flex-grow: 1;
         &__block {
             display: flex;
         }
@@ -41,6 +41,9 @@
             margin-right: 0;
         }
         &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 44px;
             height: 44px;
             text-align: center;
@@ -54,14 +57,11 @@
             transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
             &__icon {
-                position: relative;
-                top: 12px;
                 fill: $fourth-color;
             }
 }
 
 .footer-form {
-    margin-left: 93px;
     &__wrap {
         display: flex;
     }
@@ -105,6 +105,10 @@
 
 @media screen and (max-width: 1200px) {
 
+.footer-form__input {
+    width: 450px;
+}
+
 .footer__container {
     justify-content: space-around;
     flex-wrap: wrap;
@@ -115,6 +119,7 @@
 }
 .footer-networks {
     text-align: center;
+    flex-grow: 0;  
 }
 .footer-form {
     text-align: center;
@@ -147,4 +152,13 @@
         margin: 60px auto auto;
     }
 
+}
+
+@media screen and (max-width: 480px) {
+    .footer-form {
+        width: 100%;
+    }
+    .footer-form__input {
+        width: 100%;
+    }
 }

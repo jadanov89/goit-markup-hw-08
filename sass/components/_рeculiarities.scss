@@ -43,17 +43,15 @@
         margin-left: 0;
     }
 }
+@media screen and (max-width: 768px) {
+    .рeculiarities__title {
+        font-size: 14px;
+    }
+    .рeculiarities__text {
+        font-size: 14px;
+    }
+}
 
-/*
-@media (min-width: 481px) and (max-width: 1200px) {
-    .рeculiarities__item {
-        width: 50%;
-        flex-basis: calc(50% - 15px);
-        margin-top: 30px;
-        margin-left: -15px;
-}
-}
-*/
 @media screen and (max-width: 480px) {
     .рeculiarities__item {
         width: 100%;

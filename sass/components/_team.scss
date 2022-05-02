@@ -53,6 +53,9 @@
             }
 
                 &__networks {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     width: 44px;
                     height: 44px;
                     text-align: center;
@@ -65,7 +68,6 @@
                     margin-right: 0;
                 }
                     &__icons {
-                        position: relative;
                         top: 12px;
                         fill: $icon-color;
                     }
@@ -108,10 +110,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .team__block {
+        justify-content: center;
+      }
     .team__item {
-        flex-basis: calc(50% - 15px);
-        margin-top: 30px;
-        margin-left: 0;
+        flex-basis: calc(450px - 15px);
+     
       }
       .team-image {
         width: 450px;
@@ -119,9 +123,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .team__block {
-        justify-content: center;
-      }
+
       .team__item {
         flex-basis: calc(100% - 15px);
        
